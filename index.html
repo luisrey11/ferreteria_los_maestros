@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería Los Maestros - Sistema de Gestión y Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="funciones.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ferretería Los Maestros</h1>
+        <p>Materiales de construcción, herramientas y ferretería general</p>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo y Stock</a></li>
+                <li><a href="cuentas.html">Cuentas Corrientes</a></li>
+                <li><a href="login.html" id="btn-login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bienvenida">
+            <h2>Bienvenido al Portal de Autoconsulta</h2>
+            <p>Evite filas y llamadas telefónicas. Consulte stock en tiempo real, revise productos y gestione sus
+                pedidos o cuenta corriente de forma rápida y segura.</p>
+        </section>
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+
+            <article class="card">
+                <h3>Catálogo en Línea</h3>
+                <p>Más de 800 referencias disponibles con actualización de stock instantánea para contratistas y
+                    particulares.</p>
+                <a href="catalogo.html" class="btn">Ver Catálogo</a>
+            </article>
+            <article class="card">
+                <h3>Despacho a Obra</h3>
+                <p>Verifique si su dirección de construcción se encuentra dentro de nuestra zona de cobertura
+                    interactiva.</p>
+            </article>
+            <article class="card">
+                <h3>Cuentas Corrientes</h3>
+                <p>Revise su saldo pendiente, historial de compras y consumos mensuales de forma digital y transparente.
+                </p>
+                <a href="cuentas.html" class="btn">Revisar Saldo</a>
+            </article>
+        </section>
+        <section id="contacto-rapido">
+            <h2>¿Tiene alguna consulta específica?</h2>
+            <form id="form-contacto" novalidate>
+                <fieldset>
+                    <legend>Formulario de Contacto</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name"
+                        required>
+                    <span class="error-msg" id="error-nombre"></span>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email"
+                        required>
+                    <span class="error-msg" id="error-email"></span>
+
+                    <label for="mensaje">Mensaje o requerimiento de materiales:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"
+                        placeholder="Escriba los productos que necesita consultar..." required></textarea>
+                    <span class="error-msg" id="error-mensaje"></span>
+
+                    <button type="submit" class="btn-submit">Enviar Consulta</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ferretería Los Maestros - La Serena, Región de Coquimbo[cite: 1]. Todos los derechos reservados.
+        </p>
+        <p>Contacto: contacto@ferreterialosmaestros.cl | Teléfono: +56 9 1234 5678</p>
+    </footer>
+</body>
+</html>
