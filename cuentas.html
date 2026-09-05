@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentas Corrientes - Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/funciones.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header">
+            <h1>Ferretería Los Maestros</h1>
+            <p>Portal de Gestión de Cuentas Corrientes</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo y Stock</a></li>
+                    <li><a href="cuentas.html" class="active">Cuentas Corrientes</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="seccion-cuentas">
+            <h2>Estado de Cuenta y Movimientos</h2>
+            <p>Consulte el saldo actual, el historial de facturación y los créditos disponibles de su cuenta corriente comercial.</p>
+            <div class="resumen">
+                <article class="dato">
+                    <h3>Crédito Disponible</h3>
+                    <p class="monto">$1.500.000</p>
+                </article>
+                <article class="dato">
+                    <h3>Deuda Actual</h3>
+                    <p class="monto deuda">$350.000</p>
+                </article>
+                <article class="dato">
+                    <h3>Estado de Línea</h3>
+                    <p class="estado activo">Al Día</p>
+                </article>
+            </div>
+
+            <div class="tabla">
+                <h3>Últimos Movimientos Registrados</h3>
+                <table class="tabla-datos">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>N° Documento</th>
+                            <th>Descripción</th>
+                            <th>Cargo / Abono</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/09/2026</td>
+                            <td>FAC-10492</td>
+                            <td>Compra de materiales de construcción (Cemento y Fierros)</td>
+                            <td class="cargo">-$120.000</td>
+                            <td>$350.000</td>
+                        </tr>
+                        <tr>
+                            <td>20/08/2026</td>
+                            <td>PAG-8912</td>
+                            <td>Abono transferencia bancaria</td>
+                            <td class="abono">+$300.000</td>
+                            <td>$230.000</td>
+                        </tr>
+                        <tr>
+                            <td>10/08/2026</td>
+                            <td>FAC-10211</td>
+                            <td>Herramientas eléctricas y accesorios</td>
+                            <td class="cargo">-$530.000</td>
+                            <td>$530.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Ferretería Los Maestros - La Serena, Región de Coquimbo. Todos los derechos reservados.</p>
+        <p>Contacto: cuentas@ferreterialosmaestros.cl | Teléfono: +56 9 1234 5678</p>
+    </footer>
+
+</body>
+</html>
