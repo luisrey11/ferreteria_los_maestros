@@ -3,129 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo y Stock - Ferretería Los Maestros</title>
+    <title>Catálogo de Productos - Ferretería Los Maestros</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/funciones.js" defer></script>
 </head>
-<body class="body-catalogo">
-
+<body>
     <header class="site-header">
-        <div class="header-container">
-            <h1>Ferretería <strong>Los Maestros</strong></h1>
-            <p>Catálogo General de Productos y Herramientas</p>
-            
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html" class="active">Catálogo y Stock</a></li>
-                    <li><a href="cuentas.html">Cuentas Corrientes</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Ferretería Los Maestros</h1>
+        <p>Catálogo Oficial de Productos por Categoría</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="cuenta-corriente.html">Cuenta Corriente</a></li>
+                <li><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="menu-catalogo">
-        <h2>Nuestros Productos Destacados</h2>
-        <p class="sub-catalogo">Explore el stock disponible con imágenes y precios referenciales actualizados.</p>
-        <div class="catalogo-grid">
+    <main class="catalogo-container">
+        
+        <aside class="categorias-sidebar">
+            <h3>Categorías</h3>
+            <ul class="lista-categorias">
+                <li><a href="#mat-construccion" class="cat-link">Mat. Construcción</a></li>
+                <li><a href="#pinturas" class="cat-link">Pinturas</a></li>
+                <li><a href="#herramientas" class="cat-link">Herramientas</a></li>
+                <li><a href="#gasfiteria" class="cat-link">Gasfitería</a></li>
+                <li><a href="#electricidad" class="cat-link">Electricidad</a></li>
+                <li><a href="#tornilleria" class="cat-link">Tornillería</a></li>
+                <li><a href="#madera" class="cat-link">Madera</a></li>
+                <li><a href="#seguridad" class="cat-link">Seguridad</a></li>
+                <li><a href="#jardin" class="cat-link">Jardín</a></li>
+            </ul>
+        </aside>
 
-            <article class="producto">
-                <div class="producto-imgr">
-                    <img src="img/taladro_percutor.jpg" alt="Taladro Percutor">
-                </div>
-                <div class="producto-info">
-                    <h3>Taladro Percutor Profesional</h3>
-                    <p class="precio">$45.990</p>
-                </div>
-            </article>
+        <div class="catalogo-contenido">
+            <div class="catalogo-header-titulo">
+                <h2>Nuestros Productos</h2>
+                <p>Explora el inventario disponible filtrado por categoría y verifica el stock en tiempo real.</p>
+            </div>
 
-            <article class="producto">
-                <div class="producto-img">
-                    <img src="img/esmeril_angular.jpg" alt="Esmeril Angular">
+            <!-- 1. Mat. Construcción -->
+            <section id="mat-construccion" class="categoria-grupo">
+                <h3>Mat. Construcción</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/cemento-polpaico.jpg" alt="Cemento Polpaico gris 25 kg">
+                        </div>
+                        <span class="codigo-badge">MC001</span>
+                        <h4>Cemento Polpaico gris 25 kg</h4>
+                        <p class="marca">Polpaico</p>
+                        <p class="precio">$5.990</p>
+                        <span class="stock-disponible">Stock: 80 sacos</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/cemento-melon.jpg" alt="Cemento Melón blanco 25 kg">
+                        </div>
+                        <span class="codigo-badge">MC002</span>
+                        <h4>Cemento Melón blanco 25 kg</h4>
+                        <p class="marca">Melón</p>
+                        <p class="precio">$7.490</p>
+                        <span class="stock-disponible">Stock: 40 sacos</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/mortero-cola-ceramica.webp" alt="Mortero cola cerámica 25 kg">
+                        </div>
+                        <span class="codigo-badge">MC003</span>
+                        <h4>Mortero cola cerámica 25 kg</h4>
+                        <p class="marca">Volcán</p>
+                        <p class="precio">$5.200</p>
+                        <span class="stock-disponible">Stock: 50 sacos</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>Esmeril Angular 750W</h3>
-                    <p class="precio">$32.500</p>
-                </div>
-            </article>
+            </section>
 
-            <article class="producto">
-                <div class="producto-img">
-                    <img src="img/set_herramientas_48.jpg" alt="Set de Herramientas">
+            <!-- 2. Pinturas -->
+            <section id="pinturas" class="categoria-grupo">
+                <h3>Pinturas</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/esmalte-sintetico.jpg" alt="Esmalte sintético blanco 1 gl">
+                        </div>
+                        <span class="codigo-badge">PT001</span>
+                        <h4>Esmalte sintético blanco 1 gl</h4>
+                        <p class="marca">Sherwin Williams</p>
+                        <p class="precio">$12.990</p>
+                        <span class="stock-disponible">Stock: 25 unidades</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>Set de Herramientas 48 Pzas</h3>
-                    <p class="precio">$28.990</p>
-                </div>
-            </article>
+            </section>
 
-           <article class="producto">
-                <div class="producto-img">
-                    <img src="img/disco_ceramica.jpg" alt="Set de Herramientas">
+            <!-- 3. Herramientas -->
+            <section id="herramientas" class="categoria-grupo">
+                <h3>Herramientas</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/Taladro-percutor.jpg" alt="Taladro percutor 650W">
+                        </div>
+                        <span class="codigo-badge">HM001</span>
+                        <h4>Taladro percutor 650W</h4>
+                        <p class="marca">Makita</p>
+                        <p class="precio">$45.990</p>
+                        <span class="stock-disponible">Stock: 10 unidades</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>disco de corte para ceramica</h3>
-                    <p class="precio">$7.490</p>
-                </div>
-            </article>
+            </section>
 
-            <article class="producto">
-                <div class="producto-img">
-                    <img src="img/cemento_25kg.jpg" alt="Set de Herramientas">
+            <!-- 4. Gasfitería -->
+            <section id="gasfiteria" class="categoria-grupo">
+                <h3>Gasfitería</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/Llave-paso-cobre.jpg" alt="Llave de paso cobre 1/2&quot;">
+                        </div>
+                        <span class="codigo-badge">GF001</span>
+                        <h4>Llave de paso cobre 1/2"</h4>
+                        <p class="marca">Nibsa</p>
+                        <p class="precio">$4.590</p>
+                        <span class="stock-disponible">Stock: 35 unidades</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>Cemento 25kg</h3>
-                    <p class="precio">$5.090</p>
-                </div>
-            </article>
+            </section>
 
-            <article class="producto">
-                <div class="producto-img">
-                    <img src="img/destornilladores_32pz.jpg" alt="Set de Herramientas">
+            <!-- 5. Electricidad -->
+            <section id="electricidad" class="categoria-grupo">
+                <h3>Electricidad</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/Cable-rollo-100m.jpg" alt="Cable NYA 2.5 mm rollo 100m">
+                        </div>
+                        <span class="codigo-badge">EL001</span>
+                        <h4>Cable NYA 2.5 mm rollo 100m</h4>
+                        <p class="marca">Celta</p>
+                        <p class="precio">$28.990</p>
+                        <span class="stock-disponible">Stock: 15 rollos</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>set de destornilladores de 32 piezas</h3>
-                    <p class="precio">$5.090</p>
-                </div>
-            </article>
+            </section>
 
-            <article class="producto">
-                <div class="producto-img">
-                    <img src="img/martillo.jpg" alt="Set de Herramientas">
+            <!-- 6. Tornillería -->
+            <section id="tornilleria" class="categoria-grupo">
+                <h3>Tornillería</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/Tornillo-caja-100u.jpg" alt="Tornillo internaciones 1&quot; caja 100u">
+                        </div>
+                        <span class="codigo-badge">TR001</span>
+                        <h4>Tornillo internaciones 1" caja 100u</h4>
+                        <p class="marca">Ciser</p>
+                        <p class="precio">$3.490</p>
+                        <span class="stock-disponible">Stock: 60 cajas</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>martillo</h3>
-                    <p class="precio">$7.990</p>
-                </div>
-            </article>
+            </section>
 
-            <article class="producto">
-                <div class="producto-img">
-                    <img src="img/martillo-goma.jpg" alt="Set de Herramientas">
+            <!-- 7. Madera -->
+            <section id="madera" class="categoria-grupo">
+                <h3>Madera</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/Placa-OSB-11.1mm-1.22x2.44m.jpg" alt="Placa OSB 11.1 mm 1.22 x 2.44 m">
+                        </div>
+                        <span class="codigo-badge">MD001</span>
+                        <h4>Placa OSB 11.1 mm 1.22 x 2.44 m</h4>
+                        <p class="marca">Louisiana-Pacific</p>
+                        <p class="precio">$11.990</p>
+                        <span class="stock-disponible">Stock: 45 planchas</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>matillo de goma</h3>
-                    <p class="precio">$10.990</p>
-                </div>
-            </article>
+            </section>
 
-            <article class="producto">
-                <div class="producto-img">
-                    <img src="img/pala.jpg" alt="Set de Herramientas">
+            <!-- 8. Seguridad -->
+            <section id="seguridad" class="categoria-grupo">
+                <h3>Seguridad</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/Casco-de-seguridad-blanco.jpg" alt="Casco de seguridad minero blanco">
+                        </div>
+                        <span class="codigo-badge">SG001</span>
+                        <h4>Casco de seguridad minero blanco</h4>
+                        <p class="marca">MSA</p>
+                        <p class="precio">$3.990</p>
+                        <span class="stock-disponible">Stock: 50 unidades</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-                <div class="producto-info">
-                    <h3>pala</h3>
-                    <p class="precio">$12.990</p>
+            </section>
+
+            <!-- 9. Jardín -->
+            <section id="jardin" class="categoria-grupo">
+                <h3>Jardín</h3>
+                <div class="grid-productos">
+                    <div class="producto-card">
+                        <div class="producto-img">
+                            <img src="img/Manguera-25m.jpg" alt="Manguera de riego 1/2&quot; 25m">
+                        </div>
+                        <span class="codigo-badge">JD001</span>
+                        <h4>Manguera de riego 1/2" 25m</h4>
+                        <p class="marca">Hozelock</p>
+                        <p class="precio">$14.990</p>
+                        <span class="stock-disponible">Stock: 20 unidades</span>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
                 </div>
-            </article>
+            </section>
 
         </div>
     </main>
 
+    <!-- Pie de página -->
     <footer class="footer">
-        <p>&copy; 2026 Ferretería Los Maestros - Todos los derechos reservados.</p>
-        <p>Contacto: cuentas@ferreterialosmaestros.cl | Teléfono: +56 9 1234 5678</p>
+        <p>&copy; 2026 Ferretería Los Maestros. Todos los derechos reservados.</p>
     </footer>
 
 </body>

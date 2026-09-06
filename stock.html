@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Stock - Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/funciones.js" defer></script>
+</head>
+<body class="body-stock">
+
+    <header class="admin-header">
+        <span class="logo-texto">Ferretería <strong>Los Maestros</strong> - Módulo de Stock</span>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="cuentas.html">Cuenta Corriente</a>
+            <a href="login.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="stock-section">
+            <h2>Consulta de Stock en Bodega</h2>
+            <p>Supervisa las existencias y el stock mínimo de las referencias oficiales.</p>
+
+            <div class="table-responsive">
+                <table class="tabla-stock">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre del Producto</th>
+                            <th>Categoría</th>
+                            <th>Stock Mínimo</th>
+                            <th>Stock Actual</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-stock-body">
+                        <tr>
+                            <td>MC001</td>
+                            <td>Cemento Polpaico gris 25 kg</td>
+                            <td>Mat. Construcción</td>
+                            <td>20</td>
+                            <td><span class="stock-valor">80</span></td>
+                        </tr>
+                        <tr>
+                            <td>MC002</td>
+                            <td>Cemento Melón blanco 25 kg</td>
+                            <td>Mat. Construcción</td>
+                            <td>10</td>
+                            <td><span class="stock-valor">40</span></td>
+                        </tr>
+                        <tr>
+                            <td>MC003</td>
+                            <td>Mortero cola cerámica 25 kg</td>
+                            <td>Mat. Construcción</td>
+                            <td>15</td>
+                            <td><span class="stock-valor">50</span></td>
+                        </tr>
+                        <tr>
+                            <td>MC004</td>
+                            <td>Mortero nivelador piso 25 kg</td>
+                            <td>Mat. Construcción</td>
+                            <td>10</td>
+                            <td><span class="stock-valor">30</span></td>
+                        </tr>
+                        <tr>
+                            <td>MC005</td>
+                            <td>Arena fina construcción 25 kg</td>
+                            <td>Mat. Construcción</td>
+                            <td>20</td>
+                            <td><span class="stock-valor">60</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

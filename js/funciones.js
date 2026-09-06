@@ -1,46 +1,66 @@
-    // 2. Lógica para la validación del formulario de inicio de sesión
-    const formularioLogin = document.querySelector('#form-login');
-    const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+document.addEventListener('DOMContentLoaded', () => {
+    const formLogin = document.getElementById('form-login');
 
-    if (formularioLogin) {
-        formularioLogin.addEventListener('submit', function(e) {
-            e.preventDefault();
+    if (formLogin) {
+        formLogin.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-            const correo = document.querySelector('#email');
-            const password = document.querySelector('#password');
-            const mensajeConfirmacion = document.querySelector('#confirmacion-login');
-            let formularioValido = true;
+            const correoValido = validarCorreo();
+            const passwordValida = validarPassword();
 
-            // Validación del correo electrónico
-            if (!patronCorreo.test(correo.value.trim())) {
-                correo.classList.add('campo-error');
-                formularioValido = false;
-            } else {
-                correo.classList.remove('campo-error');
-            }
-
-            // Validación de la contraseña (que no esté vacía)
-            if (password.value.trim() === '') {
-                password.classList.add('campo-error');
-                formularioValido = false;
-            } else {
-                password.classList.remove('campo-error');
-            }
-
-            // Si los datos son correctos, muestra el mensaje de éxito
-            if (formularioValido) {
-                mensajeConfirmacion.style.color = '#0a194f';
-                mensajeConfirmacion.textContent = '¡Inicio de sesión exitoso! Redirigiendo...';
-                
-                formularioLogin.reset();
-
-                // Cierra el modal automáticamente después de 2 segundos (opcional)
-                setTimeout(() => {
-                    modalLogin.classList.remove('activo');
-                    mensajeConfirmacion.textContent = '';
-                }, 2000);
-            } else {
-                mensajeConfirmacion.textContent = '';
+            if (correoValido && passwordValida) {
+                window.location.href = "index.html"; 
             }
         });
     }
+});
+
+function validarCorreo() {
+    const inputCorreo = document.getElementById('correo');
+    const errorCorreo = document.getElementById('error-correo');
+    const valorCorreo = inputCorreo.value.trim();
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (valorCorreo === "") {
+        inputCorreo.classList.add('campo-error');
+        errorCorreo.textContent = "El correo no puede estar vacío.";
+        errorCorreo.style.display = "block";
+        return false;
+    } 
+    
+    if (!regexEmail.test(valorCorreo)) {
+        inputCorreo.classList.add('campo-error');
+        errorCorreo.textContent = "El formato no se conoce (falta '@' o dominio como .com / .cl).";
+        errorCorreo.style.display = "block";
+        return false;
+    }
+
+    inputCorreo.classList.remove('campo-error');
+    errorCorreo.style.display = "none";
+    return true;
+}
+
+function validarPassword() {
+    const inputPassword = document.getElementById('password');
+    const errorPassword = document.getElementById('error-password');
+    const valorPassword = inputPassword.value;
+    const passwordCorrecta = "12345678"; // Contraseña de prueba
+
+    if (valorPassword === "") {
+        inputPassword.classList.add('campo-error');
+        errorPassword.textContent = "La contraseña no puede estar vacía.";
+        errorPassword.style.display = "block";
+        return false;
+    } 
+    
+    if (valorPassword !== passwordCorrecta) {
+        inputPassword.classList.add('campo-error');
+        errorPassword.textContent = "La contraseña es incorrecta.";
+        errorPassword.style.display = "block";
+        return false;
+    }
+
+    inputPassword.classList.remove('campo-error');
+    errorPassword.style.display = "none";
+    return true;
+}
